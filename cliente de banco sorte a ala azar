@@ -1,0 +1,11 @@
+ Openpyxl Ganador sorteo clientes
+import openpyxl
+import random
+Excelworkbook= openpyxl.load_workbook('c:/misexcel/declaracion_trimestral3.xlsx')
+Excelsheet=Excelworkbook.active
+candidad_clientes=Excelsheet.max_row
+id_clientes=Excelsheet['A']
+ganador=random.randrange(1,candidad_clientes)
+print("Id cliente ganador:", ganador) 
+
+    
